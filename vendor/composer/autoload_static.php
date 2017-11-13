@@ -277,10 +277,7 @@ class ComposerStaticInite3c46df71c5cf359a8d8e585b9e955be
         'App\\CreateArticlesTable' => __DIR__ . '/../..' . '/app/Article.php',
         'App\\Crud' => __DIR__ . '/../..' . '/app/Crud.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-<<<<<<< HEAD
-=======
         'App\\Http\\Controllers\\ApiController' => __DIR__ . '/../..' . '/app/Http/Controllers/ApiController.php',
->>>>>>> b1905ab439c934d06834ad658d8dd1de9637cc51
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -300,20 +297,14 @@ class ComposerStaticInite3c46df71c5cf359a8d8e585b9e955be
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
-<<<<<<< HEAD
-=======
         'App\\students' => __DIR__ . '/../..' . '/app/students.php',
->>>>>>> b1905ab439c934d06834ad658d8dd1de9637cc51
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'CreateArticlesTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_10_092401_create_articles_table.php',
         'CreateCrudsTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_10_101826_create_cruds_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-<<<<<<< HEAD
-=======
         'CreateStudentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_11_131819_create_students_table.php',
->>>>>>> b1905ab439c934d06834ad658d8dd1de9637cc51
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
