@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('', function () {
-    return view('welcome');
+Route::get('/', 'CRUDController@index', function () {
+    return view('crud.index');
 });
 
 Route::get('demo', 'DemoController@demofunction');
