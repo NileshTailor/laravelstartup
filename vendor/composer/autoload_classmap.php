@@ -10,10 +10,7 @@ return array(
     'App\\CreateArticlesTable' => $baseDir . '/app/Article.php',
     'App\\Crud' => $baseDir . '/app/Crud.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
-<<<<<<< HEAD
-=======
     'App\\Http\\Controllers\\ApiController' => $baseDir . '/app/Http/Controllers/ApiController.php',
->>>>>>> b1905ab439c934d06834ad658d8dd1de9637cc51
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -32,22 +29,15 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
-    'App\\User' => $baseDir . '/app/User.php',
-<<<<<<< HEAD
-=======
-    'App\\students' => $baseDir . '/app/students.php',
->>>>>>> b1905ab439c934d06834ad658d8dd1de9637cc51
+    'App\\user' => $baseDir . '/app/user.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2017_11_10_092401_create_articles_table.php',
     'CreateCrudsTable' => $baseDir . '/database/migrations/2017_11_10_101826_create_cruds_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-<<<<<<< HEAD
-=======
     'CreateStudentsTable' => $baseDir . '/database/migrations/2017_11_11_131819_create_students_table.php',
->>>>>>> b1905ab439c934d06834ad658d8dd1de9637cc51
-    'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
+    'CreateUserTable' => $baseDir . '/database/migrations/2017_11_13_125833_create_user_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
