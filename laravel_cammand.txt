@@ -1,0 +1,19 @@
+///////////// Laravel Command ////////////////////////
+
+create model
+php artisan make:model user
+//app\
+
+
+create table
+php artisan make:migration create_user_table
+//database\migrations
+
+
+Create table in database
+php artisan migrate
+
+Controller->Model->table->View
+//resources\views\user\index.blade.php
+
+Routes/web/
