@@ -14,9 +14,12 @@
 Route::get('/', 'CRUDController@index', function () {
     return view('crud.index');
 });
-
-Route::get('demo', 'DemoController@demofunction');
-
 Route::resource('crud', 'CRUDController');
+Route::resource('user', 'USERController');
 
+Route::get('addresses', function() {
+
+return View::make('addresses')->with('address', Addresses::all());
+
+});
 

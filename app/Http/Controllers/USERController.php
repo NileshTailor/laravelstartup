@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Crud;
+use App\user;
+use App\user_identity;
 
-class CRUDController extends Controller
+
+class USERController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +16,9 @@ class CRUDController extends Controller
      */
     public function index()
     {
-        $cruds = Crud::all()->toArray();
-        return view('crud.index', compact('cruds'));
+        //
     }
-
+	
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +26,22 @@ class CRUDController extends Controller
      */
     public function create()
     {
-                return view('crud.create');
+	 //$identityProofs = user::all()->toArray();
+	  $identityProofs = user::with('UserIdentities');
+	 // $identityProofs = user::find(1)->identityProofs;
+	  dd($identityProofs);
+	 exit;
+	
+
+	  
+	  // $identityProofs = user::with('IdentityProof')->paginate(2);
+	   pr($identityProofs);
+	   exit;
+       return view('welcome', compact('identityProofs'));
+	  
+	   
+	   
+       return view('user.create', compact('identityProofs'));
     }
 
     /**
@@ -34,18 +50,16 @@ class CRUDController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-   public function store(Request $request)
+    public function store(Request $request)
     {
-        $crud = new Crud([
+         $crud = new Crud([
           'title' => $request->get('title'),
           'post' => $request->get('post')
         ]);
         $crud->save();
 		return redirect('/crud');
-	    //$article = Crud::create($request->all());
-		//return response()->json($article, 201);
     }
-	
+
     /**
      * Display the specified resource.
      *
@@ -65,9 +79,7 @@ class CRUDController extends Controller
      */
     public function edit($id)
     {
-        $crud = Crud::find($id);
-        
-        return view('crud.edit', compact('crud','id'));
+        //
     }
 
     /**
@@ -77,13 +89,9 @@ class CRUDController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-   public function update(Request $request, $id)
+    public function update(Request $request, $id)
     {
-        $crud = Crud::find($id);
-        $crud->title = $request->get('title');
-        $crud->post = $request->get('post');
-        $crud->save();
-        return redirect('/crud');
+        //
     }
 
     /**
@@ -94,9 +102,6 @@ class CRUDController extends Controller
      */
     public function destroy($id)
     {
-        $crud = Crud::find($id);
-      $crud->delete();
-
-      return redirect('/crud');
+        //
     }
 }

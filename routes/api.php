@@ -26,5 +26,7 @@ Route::get('test',function(){
 
 
 
-//Route::post('crud', 'ApiController@store');
+Route::get('identityproofdetails', 'ApiController@identity_proof_details');
+
+
 
