@@ -12,7 +12,4 @@ class user extends Model
      }
 	 
 	  protected $table = 'user_identity';
-	//  protected $table = 'address';
-	  
-	  
 }
