@@ -14,6 +14,7 @@ class user extends Model
      {
         return $this->hasMany('App\user_identity');
      }
+<<<<<<< HEAD
 	 public function IdentityProofs()
 	 {
 		return $this->belongsTo('App\identity_proof');
@@ -33,5 +34,9 @@ class user extends Model
 	 protected $hidden = [
         'password', 'remember_token',
     ];
+=======
+	 
+	  protected $table = 'user_identity';
+>>>>>>> b5bac47ff64fd17f7a691767d0682e01002f4bf1
 }
 
