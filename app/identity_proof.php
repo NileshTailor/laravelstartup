@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class identity_proof extends Model
 {
-   public function user()
+  protected $table = 'identity_proof';
+   /* public function user()
     {
-        return $this->belongsTo('App\IdentityProof');
-    }
+        return $this->belongsTo('App\user');
+    } */
 }

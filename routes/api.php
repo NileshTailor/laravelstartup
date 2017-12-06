@@ -23,10 +23,19 @@ Route::get('test',function(){
      //return view('welcome');	
 });
 
+Route::post('userRegistration', 'ApiController@userRegistration');
+Route::post('adminlogin', 'ApiController@adminlogin');
+Route::post('vendorRegistration', 'ApiController@vendorRegistration');
+Route::get('registrationView', 'ApiController@registrationView');
+Route::get('identityProofDetails', 'ApiController@identityProofDetails');
+Route::get('zone', 'ApiController@zone');
+Route::get('category', 'ApiController@category');
+Route::get('area', 'ApiController@area');
+Route::get('vendorZonecategories', 'ApiController@vendorZonecategories');
+Route::get('vendorView', 'ApiController@vendorView');
 
 
 
-Route::get('identityproofdetails', 'ApiController@identity_proof_details');
 
 
 

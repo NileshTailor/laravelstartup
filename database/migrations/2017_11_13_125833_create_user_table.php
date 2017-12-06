@@ -21,7 +21,7 @@ class CreateUserTable extends Migration
             $table->date('dob');
             $table->bigInteger('mobile_no');
             $table->string('spouse_name');
-            $table->bigInteger('spouce_mobile_no');
+            $table->bigInteger('spouse_mobile_no');
             $table->string('email',50);
             $table->bigInteger('land_line_no');
             $table->string('father_name');
@@ -30,6 +30,8 @@ class CreateUserTable extends Migration
             $table->longtext('hobby',100);
             $table->string('emergancy_contact_detail',150);
             $table->bigInteger('annual_income');
+			$table->bigInteger('area_id');
+			$table->bigInteger('zone_id');
             $table->enum('use_smart_phone',['Yes', 'No'])->default('No');
             $table->string('photo',100);
 			$table->softDeletes();

@@ -1,30 +1,33 @@
 <style>
-
 input[type=text] {
    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     //box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid #a9a9a9;
-	background-color: #fff;
+   // border: 1px thin;
+   // border-bottom: 2px solid #a9a9a9;
+	//background-color: #fff;
 }
 textarea[type=text] {
    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     //box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid #a9a9a9;
-	background-color: #fff;
+   // border: none;
+    //border-bottom: 2px solid #a9a9a9;
+	//background-color: #fff;
 }
 tr.noBorder td {
   border: 0;
 }
 </style>
-
 <style>
+.paddingTop{
 
+     padding:10px !important;
+}
+</style>
+<style>
 #custom-search-input {
         margin:0;
         margin-top: 10px;
@@ -70,128 +73,190 @@ tr.noBorder td {
 }
 
 </style>
-
-@extends('master')
+@extends('layout.layout')
 @section('content')
-<div class="container">
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light ">
+			<div class="portlet-title">
+				<div class="caption">
+					<label class="paddingTop" style="color:#4a5ab8; font-size:18px;"><b><i class="fa fa-user"></i> वरिष्ठ पंजीकरण प्रपत्र / Senior Citizen Registration Form</b></label>
+				</div>
+			</div>
+			<div class="portlet-body table-responsive">
   <form method="post" action="{{url('user')}}" enctype="multipart/form-data">
       {{csrf_field()}}
-	  
-		<div id="legend" style="text-align:center">
-		<legend class=""><label for="" style="color:#4a5ab8; font-size:18px;">वरिष्ठ पंजीकरण प्रपत्र / Senior Citizen Registration Form</label></legend>
-		</div>
-		</br>
-		
-		<!--<div id="legend" style="text-align:left;">
-		<legend class="">
-		<label for="" style="text-align:left;">
-		<button class="btn btn-lg btn-primary btn-block">निजी जानकारी / Personal Information</button>
-		</label></legend>
-		</div>-->
-		</br>
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">नाम / Name</label></div>
+   <div class="col-md-9"><input type="text" id="" class="form-control input-sm" name="name" width="100%" required placeholder="Name"></div>
+   </div>
+   </div>
    
-  <table>
-  <tr class="noBorder">
-  <td width="25%"><label for="">नाम / Name</label></td>
-  <td colspan="3" width="75%"><input type="text" id="" name="name" width="100%"></td>
-  </tr>
- <tr class="noBorder">
-  <td><label for="">जन्म तारीख  / Date of Birth</label></td>
-  <td><input type="text" id="" name="dob" ></td>
- <td><label for="">मोबाइल नं.  / Mobile No.</label></td>
- <td><input type="text" id="" name="mobile_no"></td>
- </tr>
-  <tr class="noBorder">
-  <td><label for="">पति / पत्नी का नाम  / Spouse Name</label></td>
-  <td colspan="3"><input type="text" id="" name="spouse_name" ></td>
-  </tr>
-  
- <tr class="noBorder">
-  <td><label for="">जन्म तारीख  / Date of Birth</label></td>
-  <td><input type="text" id="" name="spouce_dob" ></td>
- <td><label for="">मोबाइल नं.  / Mobile No.</label></td>
- <td><input type="text" id="" name="spouce_mobile_no"></td>
- </tr>
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">जन्म तारीख  / Date of Birth</label></div>
+   <div class="col-md-3"><input type="text" id="" name="dob" required
+   placeholder="dd-mm-yyyy" class="form-control input-sm date-picker" data-date-format="dd-mm-yyyy" label="false" placeholder="Date of Birth">
+   </div>
+   <div class="col-md-3"><label class="paddingTop">मोबाइल नं.  / Mobile No.</label></div>
+   <div class="col-md-3"><input type="text" id="" class="form-control input-sm" name="mobile_no" required placeholder="Mobile No."></div>
+   </div>
+   </div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">पति / पत्नी का नाम  / Spouse Name</label></div>
+   <div class="col-md-9"><input type="text" id="" class="form-control input-sm" name="spouse_name" placeholder="Spouse Name"></div>
+   </div>
+   </div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">जन्म तारीख  / Date of Birth</label></div>
+   <div class="col-md-3"><input type="text" id="" class="form-control input-sm" name="spouse_dob" required
+   placeholder="dd-mm-yyyy" class="date-picker" data-date-format="dd-mm-yyyy" label="false"></div>
+   <div class="col-md-3"><label class="paddingTop">मोबाइल नं.  / Mobile No.</label></div>
+   <div class="col-md-3"><input type="text" id="" class="form-control input-sm" name="spouse_mobile_no" placeholder="Spouse Mobile No."></div>
+   </div></div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">ईमेल  / Email</label></div>
+   <div class="col-md-3"><input type="text" id="" class="form-control input-sm" name="email" placeholder="Email ID"></div>
+   <div class="col-md-3"><label class="paddingTop">फ़ोन नं.  / Land Line No.</label></div>
+   <div class="col-md-3"><input type="text" id="" class="form-control input-sm" name="land_line_no" placeholder="Land Line No."></div>
+   </div></div>
+   
  
-  <tr class="noBorder">
-  <td><label for="">ईमेल  / Email</label></td>
-  <td><input type="text" id="" name="email" ></td>
- <td><label for="">फ़ोन नं.  / Land Line No.</label></td>
- <td><input type="text" id="" name="land_line_no"></td>
- </tr>
- 
-  <tr class="noBorder">
-  <td><label for="">पिता का नाम / Fathers Name</label></td>
-  <td colspan="3"><input type="text" id="" name="father_name" ></td>
-  </tr>
   
-   <tr class="noBorder">
-  <td><label for="">पता / Address</label></td>
-  <td colspan="3"><textarea type="text" rows="1" id="" name="address" style="resize: none" ></textarea></td>
-  </tr>
+	<div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">पिता का नाम / Fathers Name</label></div>
+   <div class="col-md-9"><input type="text" id="" class="form-control input-sm" name="father_name" placeholder="Father Name"></div>
+   </div>
+   </div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">पता / Address</label></div>
+   <div class="col-md-9"><textarea type="text" rows="1" class="form-control input-sm" id="" name="address" style="resize: none" required placeholder="Address.."></textarea></div>
+   </div>
+   </div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">निकटस्थ पहचान स्थल / Near By Landmark</label></div>
+   <div class="col-md-9"><input type="text" id="" class="form-control input-sm" name="landmark" placeholder="Landmark"></div>
+   </div>
+   </div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">अभिरुचि / Hobby</label></div>
+   <div class="col-md-9"><input type="text" id="" class="form-control input-sm" name="hobby" placeholder="Hobby"></div>
+   </div>
+   </div>
   
-  <tr class="noBorder">
-  <td><label for="">निकटस्थ पहचान स्थल / Near By Landmark</label></td>
-  <td colspan="3"><input type="text" id="" name="landmark" ></td>
-  </tr>
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">आपातकालीन संपर्क व्यक्ति का नाम व  मोबाइल नं. / 
+   Contact Person in case of Emergancy Name & Mobile No.</label></div>
+   <div class="col-md-9"><input type="text" class="form-control input-sm" id="" name="emergancy_contact_detail" placeholder="Emergancy Details"></div>
+   </div>
+   </div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">वार्षिक आय / Annual Income</label></div>
+   <div class="col-md-9"><input type="text" id="" class="form-control input-sm" name="annual_income" placeholder="Annual Income"></div>
+   </div></div>
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">क्या आप स्मार्ट फ़ोन यूज करते है? / Do You Use Smart Phone?</label></div>
+   <br><div class="col-md-9"><input type="radio" id="yes" name="use_smart_phone" value="Yes" checked> <b>YES</b> &nbsp;&nbsp;<input type="radio" id="no" name="use_smart_phone" value="No"> <b>NO</b></div>
+   </div>
+   </div>
+   
+	<div class="row">
+	<div class="form-group">
+	<div class="col-md-12"><label class="paddingTop"><b>सलंग्न पहचान प्रमाण / Enclosed Identity Proof</b></label></div>
+	</div>
+	</div>	
+   
+	<div class="row">
+	@foreach($identityProofs as $post)
+	<div class="col-md-3" style="padding-left:26px">
+	<input type="checkbox" class="form-control input-sm" id="" name="identity_proof_id[]" width="20%" value="{{$post['id']}}"> {{$post['name']}}
+	</div>
+	@endforeach
+	</div>
+  <br>
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-3"><label class="paddingTop">फोटो सेलेक्ट करे  /  Upload Your Photo</label></div>
+   <div class="col-md-9 paddingTop"><input type="file" name="photo"></div>
+   </div>
+   </div>
+   
   
-  <tr class="noBorder">
-  <td><label for="">अभिरुचि / Hobby</label></td>
-  <td colspan="3"><input type="text" id="" name="hobby" ></td>
-  </tr>
-  
-    <tr class="noBorder">
-  <td><label for="">आपातकालीन संपर्क व्यक्ति का नाम व  मोबाइल नं. / Contact Person in case of Emergancy Name & Mobile No.</label></td>
-  <td colspan="3"><input type="text" id="" name="emergancy_contact_detail" ></td>
-  </tr>
-  
-   <tr class="noBorder">
-  <td><label for="">वार्षिक आय / Annual Income</label></td>
-  <td colspan="3"><input type="text" id="" name="annual_income" ></td>
-  </tr>
-  
-  <tr class="noBorder">
-  <td><label for="">क्या आप स्मार्ट फ़ोन यूज करते है? / Do You Use Smart Phone?</label></td>
-  <td colspan="3"><input type="text" id="" name="use_smart_phone" ></td>
-  </tr>
-  <tr class="noBorder">
-  <td colspan="4" style="text-align:left;"><label for="">सलंग्न पहचान प्रमाण / Enclosed Identity Proof</label></td>
-  </tr>
-  
-  <!--<tr class="noBorder">
-  <td>
-  <input type="checkbox" id="" name="" width="20%">आधार कार्ड / Adhar Card
-  </td>
-  <td>
-  <input type="checkbox" id="" name="" width="20%">पेन कार्ड / Pan Card
-  </td>
-  <td>
-  <input type="checkbox" id="" name="" width="20%">ड्राइविंग लाइसेंस  / Driving Licence
-  </td>
-  <td>
-  <input type="checkbox" id="" name="" width="20%">अन्य पहचान पत्र / Any ID Proof
-  </td>
-  </tr>-->
-   @foreach($identityProofs as $post)
-      <tr>
-  <td><input type="checkbox" id="" name="" width="20%" value="{{$post['id']}}">{{$post['name']}}
-  </td>
-      </tr>
-      @endforeach
-  
-  <tr class="noBorder">
-   <td style="padding-top:40px"><label for="">फोटो सेलेक्ट करे  /  Upload Your Photo</label></td>
-  <td colspan="3" style="text-align: left; padding-top:40px">
-  <input type="file" name="photo">
-  </td>
-  </tr>
-  
-  <tr class="noBorder" style="">
-  <td colspan="4" style="text-align:center; padding-top:40px">
-  <button class="btn btn-lg btn-primary btn-medium btn-signin" type="submit">Register</button>
-  </td>
-  </tr>
- </table>
+	  <div class="row">
+	<div class="form-group">
+	<div class="col-md-3">
+	<label class="paddingTop">सेलेक्ट क्षेत्र  /  Select Zone</label></div>
+	<div class="col-md-3 paddingTop" style="">
+		<select type="" class="form-control input-sm zoneId" id="zoneId" name="zone_id" zone_id="<?php echo $post['id'];?>">
+		<option value="">--select--</option>
+		@foreach($zones as $post1)
+		<option value="{{$post1['id']}}">{{$post1['name']}}</option>
+		@endforeach
+		</select>
+		</div>
+	<div class="col-md-3">
+	<label class="paddingTop">सेलेक्ट एरिया  / Select Area</label></div>
+	<div class="col-md-3 paddingTop" style="">
+		<select type="" class="form-control input-sm" id="areaId" name="area_id">
+		@foreach($areas as $post)
+		<option value="{{$post['id']}}">{{$post['name']}}</option>
+		@endforeach
+		</select>
+		</div>
+	</div>
+	</div>
+	<br>
+	
+   
+   <div class="row">
+   <div class="form-group">
+   <div class="col-md-12" style="text-align:center"><button class="btn btn-lg btn-primary btn-medium btn-signin" type="submit">Register</button></div>
+   </div>
+   </div> 
+   
  </form>
 </div>
+
+</div>
+</div>
+</div>
 @endsection
+<!--<script src='../assets/global/plugins/jquery.min.js' type="text/javascript"></script>
+<script>
+$(document).on('change','#zoneId',function(){
+    var zone_id = $(this).val();
+	$.ajax({
+                    url : "/user/destroy/id="+zone_id,
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function(data)
+                    {
+                        alert("congrts");
+					//refresh_modal();
+					//msgalert("Delete successfully.");
+                    }
+});
+});
+</script>-->
+   
+  

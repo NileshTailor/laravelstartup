@@ -1,92 +1,55 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-	
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.rcorners {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+</style>
+@extends('layout.layout')
+@section('content')
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light ">
+			<div class="portlet-title">
+				<div class="caption">
+					<label for="" style="color:#4a5ab8; font-size:18px;"><b><i class="fa fa-home"></i> Dashboard</b></label>
+				</div>
+			</div>
+			<div class="portlet-body">
+  <div class="container">
+  
+  <div class="col-md-12">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+				<div class="dashboard-stat blue-madison">
+					<div class="visual">
+						<i class="fa fa-comments"></i>
+					</div>
+					<div class="details">
+						<div class="number">
+							 {{ $users }}
+						</div>
+						<div class="desc">
+							 Total Register Users
+						</div>
+					</div>
+					<a class="more" href="#">
+					View more <i class="m-icon-swapright m-icon-white"></i>
+					</a>
+				</div>
+			</div>
+			</div>
+   </div>
+  
+  
+  
 
-        <title>Laravel</title>
+</div>
+</div>
+</div>
+</div>					
+</div>
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Test
-                </div>
-
-                <div class="links">
-                    <a href="http://127.0.0.1:8000/crud/create">master</a>
-                  </div>
-            </div>
-        </div>
-    </body>
-</html>
